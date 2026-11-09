@@ -105,6 +105,8 @@ public class AttachmentTest extends TestIntegrationBase {
         assertTrue(responseBody.contains("filename"), "Response should contain filename");
         assertTrue(responseBody.contains("_links"), "Response should contain _links");
         assertTrue(responseBody.contains("_embedded"), "Response should contain _embedded");
+        assertTrue(responseBody.contains("downloadLink"), "Response should contain downloadLink");
+        assertTrue(responseBody.contains("/api/releases/"), "Download link should point to releases endpoint");
     }
 
     @Test
